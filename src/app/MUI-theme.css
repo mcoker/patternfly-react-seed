@@ -1,0 +1,58 @@
+
+:root {
+  --mui-palette-primary-light: #42a5f5;
+  --mui-palette-secondary-light: #ba68c8;
+  --mui-palette-error-light: #ef5350;
+  --mui-palette-warning-light: #ff9800;
+  --mui-palette-info-light: #03a9f4;
+  --mui-palette-success-light: #4caf50;
+
+  --mui-palette-primary-main: #1976d2;
+  --mui-palette-secondary-main: #9c27b0;
+  --mui-palette-error-main: #d32f2f;
+  --mui-palette-warning-main: #ed6c02;
+  --mui-palette-info-main: #0288d1;
+  --mui-palette-success-main: #2e7d32;
+
+  --mui-palette-primary-dark: #1565c0;
+  --mui-palette-secondary-dark: #7b1fa2;
+  --mui-palette-error-dark: #c62828;
+  --mui-palette-warning-dark: #e65100;
+  --mui-palette-info-dark: #01579b;
+  --mui-palette-success-dark: #1b5e20;
+
+  --mui-alert-warning-bg: #FFF4E5;
+  --mui-alert-warning-text: #663c00;
+  --mui-alert-warning-border-radius: 4px;
+}
+
+:root {
+  --pf-t--color--blue--50: var(--mui-palette-primary-main);
+  --pf-t--color--blue--100: var(--mui-palette-primary-main);
+  --pf-t--color--blue--50: var(--mui-palette-primary-main);
+  --pf-t--global--border--width--box--status--default: 1px;
+  --pf-t--global--border--radius--pill:  var(--mui-alert-warning-border-radius);
+  --pf-t--global--border--radius--medium: var(--mui-alert-warning-border-radius);
+/* // --pf-t--global--color--brand--default: var(--mui-somet-thing);
+  //--pf-t--global--color--brand--200: green;
+  //--pf-t--global--color--brand--default: green; */
+  /* --pf-t--global--background--color--floating--default: var(--mui-alert-warning-bg); */
+
+  .pf-v6-c-alert.pf-m-warning {
+    --pf-v6-c-alert--BoxShadow: none;
+    /* --pf-v6-c-alert--BorderRadius: var(--mui-alert-warning-border-radius); */
+    --pf-v6-c-alert--BorderColor: var(--mui-palette-warning-light);
+    --pf-v6-c-alert--m-warning__title--Color: var(--mui-alert-warning-text);
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  };
+
+  .pf-v6-c-button.pf-m-primary {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+  };
+}
+
+
