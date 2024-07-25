@@ -1,4 +1,3 @@
-
 :root {
   --mui-palette-primary-light: #42a5f5;
   --mui-palette-secondary-light: #ba68c8;
@@ -21,38 +20,53 @@
   --mui-palette-info-dark: #01579b;
   --mui-palette-success-dark: #1b5e20;
 
-  --mui-alert-warning-bg: #FFF4E5;
   --mui-alert-warning-text: #663c00;
   --mui-alert-warning-border-radius: 4px;
+  --mui-alert-warning-font-weight: 400;
+
+  --mui-button-font-weight: 500;
 }
 
 :root {
-  --pf-t--color--blue--50: var(--mui-palette-primary-main);
-  --pf-t--color--blue--100: var(--mui-palette-primary-main);
-  --pf-t--color--blue--50: var(--mui-palette-primary-main);
+
   --pf-t--global--border--width--box--status--default: 1px;
-  --pf-t--global--border--radius--pill:  var(--mui-alert-warning-border-radius);
+  --pf-t--global--border--radius--pill: var(--mui-alert-warning-border-radius);
   --pf-t--global--border--radius--medium: var(--mui-alert-warning-border-radius);
-/* // --pf-t--global--color--brand--default: var(--mui-somet-thing);
-  //--pf-t--global--color--brand--200: green;
-  //--pf-t--global--color--brand--default: green; */
-  /* --pf-t--global--background--color--floating--default: var(--mui-alert-warning-bg); */
+  --pf-t--global--font--family--100: "Roboto", sans-serif;
+  --pf-t--global--font--family--200: "Roboto", sans-serif;
 
-  .pf-v6-c-alert.pf-m-warning {
-    --pf-v6-c-alert--BoxShadow: none;
-    /* --pf-v6-c-alert--BorderRadius: var(--mui-alert-warning-border-radius); */
-    --pf-v6-c-alert--BorderColor: var(--mui-palette-warning-light);
+
+
+  .pf-v6-c-alert {
     --pf-v6-c-alert--m-warning__title--Color: var(--mui-alert-warning-text);
+    --pf-v6-c-alert__icon--MarginInlineEnd: 12px;
 
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-  };
+    --pf-v6-c-alert--BoxShadow: none;
 
-  .pf-v6-c-button.pf-m-primary {
-    font-family: 'Roboto', sans-serif;
+    padding: 6px 16px;
+    line-height: 1.43;
+
+
+
+    .pf-v6-c-alert__title {
+      --pf-v6-c-alert__title--FontWeight: var(--mui-alert-warning-font-weight);
+
+      padding: 8px 0px;
+
+    }
+
+  }
+
+  ;
+
+  .pf-v6-c-button {
     text-transform: uppercase;
-    font-weight: 500;
-  };
+    --pf-v6-c-button--FontWeight: var(--mui-button-font-weight);
+    padding: 6px 16px;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+
+  }
+
+  ;
 }
-
-
