@@ -34,6 +34,7 @@
   --pf-t--global--border--radius--medium: var(--mui-alert-warning-border-radius);
   --pf-t--global--font--family--100: "Roboto", sans-serif;
   --pf-t--global--font--family--200: "Roboto", sans-serif;
+  /* --pf-t--global--font--family--body: "Roboto", sans-serif; */
 
 
 
@@ -44,6 +45,7 @@
     --pf-v6-c-alert--BoxShadow: none;
 
     padding: 6px 16px;
+    /* Customization could be fragile to maintain */
     line-height: 1.43;
 
 
@@ -53,6 +55,11 @@
 
       padding: 8px 0px;
 
+    }
+
+    .pf-v6-c-alert__icon {
+      /* Customization could be fragile to maintain */
+      opacity: 0.9
     }
 
   }
@@ -68,5 +75,9 @@
 
   }
 
-  ;
+  .pf-v6-c-table__button {
+    font-size: 0.875rem;
+  }
+
+
 }

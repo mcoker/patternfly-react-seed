@@ -3,6 +3,10 @@ import { Route, RouteComponentProps, Switch, useLocation } from 'react-router-do
 import { MUIThemePOC } from '@app/Settings/General/GeneralSettings';
 import { NotFound } from '@app/NotFound/NotFound';
 import { useDocumentTitle } from '@app/utils/useDocumentTitle';
+import { Support } from './Support/Support';
+import { ProfileSettings } from './Settings/Profile/ProfileSettings';
+import MUISortableTable from './Dashboard/MUITable/MUISortableTable';
+import { PFSortableTable } from "./Dashboard/PFTable/PFSortableTable";
 
 let routeFocusTimer: number;
 export interface IAppRoute {
@@ -28,11 +32,37 @@ const routes: AppRouteConfig[] = [
     label: 'Dashboard',
     routes: [
       {
+        component: PFSortableTable,
+        exact: true,
+        label: 'PF Table',
+        path: '/',
+        title: 'PatternFly Seed | PF Table',
+      },
+    ],
+  },
+  {
+    component: Support,
+    exact: true,
+    label: 'Support',
+    path: '/support',
+    title: 'PatternFly Seed | Support Page',
+  },
+  {
+    label: 'Settings',
+    routes: [
+      {
         component: MUIThemePOC,
         exact: true,
         label: 'MUI Theme POC',
         path: '/settings',
         title: 'PatternFly Seed | General Settings',
+      },
+      {
+        component: ProfileSettings,
+        exact: true,
+        label: 'Profile',
+        path: '/settings/profile',
+        title: 'PatternFly Seed | Profile Settings',
       },
     ],
   },
