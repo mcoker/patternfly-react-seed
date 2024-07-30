@@ -63,7 +63,9 @@
       opacity: 0.9
     }
 
-  };
+  }
+
+  ;
 
   .pf-v6-c-button {
     text-transform: uppercase;
@@ -82,11 +84,14 @@
     --pf-v6-c-table__sort__button--hover__sort-indicator--Color: #00000099;
     --pf-v6-c-table__sort__button--hover__text--Color: #00000099;
 
-    .pf-m-align-right { text-align: right; }
+    .pf-m-align-right {
+      text-align: right;
+    }
 
     .pf-v6-c-table__button {
       font-size: 0.875rem;
     }
+
 
     td.pf-v6-c-table__td {
       font-weight: 400;
@@ -122,17 +127,24 @@
 
 
 
+  .pf-v6-c-tab-content {
+
+    --pf-v6-c-tab-content__body--m-padding--PaddingBlockEnd: var(--pf-t--global--spacer--lg);
+    --pf-v6-c-tab-content__body--m-padding--PaddingBlockStart: var(--pf-t--global--spacer--lg);
+    --pf-v6-c-tab-content__body--m-padding--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
+    --pf-v6-c-tab-content__body--m-padding--PaddingInlineStart: var(--pf-t--global--spacer--lg);
+  }
+
   .pf-v6-c-tabs {
 
     .pf-v6-c-tabs__item.pf-m-current {
       --pf-v6-c-tabs__item--m-current__link--Color: var(--mui-palette-primary-main);
+      --pf-v6-c-tabs__item--m-current__link--after--BorderWidth: 2px;
     }
 
     .pf-v6-c-tabs__link:where(:hover, :focus) {
       --pf-v6-c-tabs__link--BackgroundColor: none;
     }
-
-
 
     .pf-v6-c-tabs__item-text {
       text-transform: uppercase;
@@ -142,10 +154,8 @@
       letter-spacing: 0.02857em;
       background-color: none;
     }
+
+
   }
-
-
-
-
 
 }

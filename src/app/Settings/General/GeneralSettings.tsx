@@ -5,6 +5,8 @@ import {
   Tab as PFTab,
   Tabs as PFTabs,
   PageSection,
+  TabContent,
+  TabContentBody,
   TabTitleText,
   Text,
   TextContent,
@@ -141,11 +143,15 @@ const MUIThemePOC: React.FunctionComponent = () => {
           aria-label="Tabs in the default example"
           role="region"
         >
-          <PFTab eventKey={0} title={<TabTitleText>Users</TabTitleText>} aria-label="Default content - users">
-            Users
+          <PFTab eventKey={0} title={<TabTitleText>Item One</TabTitleText>} aria-label="Default content - users">
+            <TabContent eventKey={0} id="tab1SectionBodyPadding">
+              <TabContentBody hasPadding> Item One </TabContentBody>
+            </TabContent>
           </PFTab>
-          <PFTab eventKey={1} title={<TabTitleText>Containers</TabTitleText>}>
-            Containers
+          <PFTab eventKey={1} title={<TabTitleText>Item Two</TabTitleText>}>
+            <TabContent eventKey={1} id="tab1SectionBodyPadding">
+              <TabContentBody hasPadding> Item Two </TabContentBody>
+            </TabContent>
           </PFTab>
         </PFTabs>
         <br />
