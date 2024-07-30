@@ -90,10 +90,10 @@ export const PFSortableTable: React.FunctionComponent = () => {
       PF Table:
       <Table aria-label="Sortable table custom toolbar">
         <Thead>
-          <Tr>
+          <Tr isBorderRow>
             <Th sort={getSortParams(0)}>{columnNames.name}</Th>
             <Th sort={getSortParams(1)}>{columnNames.branches}</Th>
-            <Th sort={getSortParams(2)} info={{ tooltip: 'More information ' }}>
+            <Th sort={getSortParams(2)}>
               {columnNames.prs}
             </Th>
             <Th sort={getSortParams(3)}>{columnNames.workspaces}</Th>
@@ -104,10 +104,10 @@ export const PFSortableTable: React.FunctionComponent = () => {
           {sortedRepositories.map((repo, rowIndex) => (
             <Tr key={rowIndex}>
               <Td dataLabel={columnNames.name}>{repo.name}</Td>
-              <Td dataLabel={columnNames.branches}>{repo.branches}</Td>
-              <Td dataLabel={columnNames.prs}>{repo.prs}</Td>
-              <Td dataLabel={columnNames.workspaces}>{repo.workspaces}</Td>
-              <Td dataLabel={columnNames.lastCommit}>{repo.lastCommit}</Td>
+              <Td className="pf-m-align-right" dataLabel={columnNames.branches}>{repo.branches}</Td>
+              <Td className="pf-m-align-right" dataLabel={columnNames.prs}>{repo.prs}</Td>
+              <Td className="pf-m-align-right" dataLabel={columnNames.workspaces}>{repo.workspaces}</Td>
+              <Td className="pf-m-align-right" dataLabel={columnNames.lastCommit}>{repo.lastCommit}</Td>
             </Tr>
           ))}
         </Tbody>

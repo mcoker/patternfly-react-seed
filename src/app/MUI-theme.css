@@ -34,6 +34,7 @@
   --pf-t--global--border--radius--medium: var(--mui-alert-warning-border-radius);
   --pf-t--global--font--family--100: "Roboto", sans-serif;
   --pf-t--global--font--family--200: "Roboto", sans-serif;
+  --pf-t--global--border--color--clicked: var(--mui-palette-primary-main);
   /* --pf-t--global--font--family--body: "Roboto", sans-serif; */
 
 
@@ -62,9 +63,7 @@
       opacity: 0.9
     }
 
-  }
-
-  ;
+  };
 
   .pf-v6-c-button {
     text-transform: uppercase;
@@ -75,9 +74,78 @@
 
   }
 
-  .pf-v6-c-table__button {
-    font-size: 0.875rem;
+  .pf-v6-c-table {
+    --pf-v6-c-table__sort--m-selected__button--Color: #000000de;
+    --pf-v6-c-table__button--BackgroundColor: none;
+    --pf-v6-c-table__button--hover--BackgroundColor: none;
+
+    --pf-v6-c-table__sort__button--hover__sort-indicator--Color: #00000099;
+    --pf-v6-c-table__sort__button--hover__text--Color: #00000099;
+
+    .pf-m-align-right { text-align: right; }
+
+    .pf-v6-c-table__button {
+      font-size: 0.875rem;
+    }
+
+    td.pf-v6-c-table__td {
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.43;
+      letter-spacing: 0.01071em;
+      display: table-cell;
+      vertical-align: inherit;
+      border-bottom: 1px solid rgba(224, 224, 224, 1);
+      /* text-align: right; */
+      padding: 16px;
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+    th.pf-v6-c-table__th.pf-v6-c-table__sort {
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      letter-spacing: 0.01071em;
+      display: table-cell;
+      vertical-align: inherit;
+      border-bottom: 1px solid rgba(224, 224, 224, 1);
+      /* text-align: right; */
+      padding: 16px;
+      color: rgba(0, 0, 0, 0.87);
+    }
+
+
   }
+
+
+
+
+
+
+  .pf-v6-c-tabs {
+
+    .pf-v6-c-tabs__item.pf-m-current {
+      --pf-v6-c-tabs__item--m-current__link--Color: var(--mui-palette-primary-main);
+    }
+
+    .pf-v6-c-tabs__link:where(:hover, :focus) {
+      --pf-v6-c-tabs__link--BackgroundColor: none;
+    }
+
+
+
+    .pf-v6-c-tabs__item-text {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25;
+      letter-spacing: 0.02857em;
+      background-color: none;
+    }
+  }
+
+
+
 
 
 }
