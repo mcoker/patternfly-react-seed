@@ -93,12 +93,12 @@ export const PFSortableTable: React.FunctionComponent = () => {
         <Thead>
           <Tr isBorderRow>
             <Th sort={getSortParams(0)}>{columnNames.name}</Th>
-            <Th sort={getSortParams(1)}>{columnNames.branches}</Th>
-            <Th sort={getSortParams(2)}>
+            <Th sort={getSortParams(1)} className="pf-m-align-right">{columnNames.branches}</Th>
+            <Th sort={getSortParams(2)} className="pf-m-align-right">
               {columnNames.prs}
             </Th>
-            <Th sort={getSortParams(3)}>{columnNames.workspaces}</Th>
-            <Th sort={getSortParams(4)}>{columnNames.lastCommit}</Th>
+            <Th sort={getSortParams(3)} className="pf-m-align-right">{columnNames.workspaces}</Th>
+            <Th sort={getSortParams(4)} className="pf-m-align-right">{columnNames.lastCommit}</Th>
           </Tr>
         </Thead>
         <Tbody>

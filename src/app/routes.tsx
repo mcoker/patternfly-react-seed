@@ -1,12 +1,23 @@
 import * as React from 'react';
 import { Route, RouteComponentProps, Switch, useLocation } from 'react-router-dom';
-import { MUIThemePOC } from '@app/Settings/General/GeneralSettings';
+import { MUIThemePOC } from '@app/Components/General/GeneralSettings';
 import { NotFound } from '@app/NotFound/NotFound';
 import { useDocumentTitle } from '@app/utils/useDocumentTitle';
 import { Support } from './Support/Support';
-import { ProfileSettings } from './Settings/Profile/ProfileSettings';
+import { DropdownDemo } from './Components/Dropdown/DropdownDemo';
 import MUISortableTable from './Dashboard/MUITable/MUISortableTable';
 import { PFSortableTable } from "./Dashboard/PFTable/PFSortableTable";
+import { PaginationDemo } from "./Components/Pagination/PaginationDemo";
+import { AlertDemo } from "./Components/Alert/AlertDemo";
+import { BadgeDemo } from "./Components/Badge/BadgeDemo";
+import { DescriptionListDemo } from "./Components/DescriptionList/DescriptionListDemo";
+import { FormDemo } from "./Components/Form/FormDemo";
+import { LabelDemo } from "./Components/Label/LabelDemo";
+import { ModalDemo } from "./Components/Modal/ModalDemo";
+import { PopoverDemo } from "./Components/Popover/PopoverDemo";
+import { TooltipDemo } from "./Components/Tooltip/TooltipDemo";
+import { ButtonDemo } from "./Components/Button/ButtonDemo";
+import { TabsDemo } from "./Components/Tabs/TabsDemo";
 
 let routeFocusTimer: number;
 export interface IAppRoute {
@@ -48,20 +59,90 @@ const routes: AppRouteConfig[] = [
     title: 'PatternFly Seed | Support Page',
   },
   {
-    label: 'Settings',
+    label: 'Components',
     routes: [
       {
-        component: MUIThemePOC,
+        component: AlertDemo,
         exact: true,
-        label: 'MUI Theme POC',
-        path: '/settings',
-        title: 'PatternFly Seed | General Settings',
+        label: 'Alert Demo',
+        path: '/components/alert',
+        title: 'PatternFly Seed | Profile Settings',
       },
       {
-        component: ProfileSettings,
+        component: BadgeDemo,
         exact: true,
-        label: 'Profile',
-        path: '/settings/profile',
+        label: 'Badge Demo',
+        path: '/components/badge',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: ButtonDemo,
+        exact: true,
+        label: 'Button Demo',
+        path: '/components/button',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: DescriptionListDemo,
+        exact: true,
+        label: 'Description List Demo',
+        path: '/components/description-list',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: DropdownDemo,
+        exact: true,
+        label: 'Dropdown Demo',
+        path: '/components/dropdown',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: FormDemo,
+        exact: true,
+        label: 'Form Demo',
+        path: '/components/form',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: LabelDemo,
+        exact: true,
+        label: 'Label Demo',
+        path: '/components/label',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: ModalDemo,
+        exact: true,
+        label: 'Modal Demo',
+        path: '/components/modal',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: PaginationDemo,
+        exact: true,
+        label: 'Pagination Demo',
+        path: '/components/pagination',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: PopoverDemo,
+        exact: true,
+        label: 'Popover Demo',
+        path: '/components/pagination',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: TabsDemo,
+        exact: true,
+        label: 'Tabs Demo',
+        path: '/components/tabs',
+        title: 'PatternFly Seed | Profile Settings',
+      },
+      {
+        component: TooltipDemo,
+        exact: true,
+        label: 'Tooltip Demo',
+        path: '/components/tooltip',
         title: 'PatternFly Seed | Profile Settings',
       },
     ],
