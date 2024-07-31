@@ -139,7 +139,7 @@
 
     .pf-v6-c-tabs__item.pf-m-current {
       --pf-v6-c-tabs__item--m-current__link--Color: var(--mui-palette-primary-main);
-      --pf-v6-c-tabs__item--m-current__link--after--BorderWidth: 2px;
+      /* --pf-v6-c-tabs__item--m-current__link--after--BorderWidth: 2px; */
     }
 
     .pf-v6-c-tabs__link:where(:hover, :focus) {
