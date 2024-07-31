@@ -31,6 +31,9 @@ const AppLayout: React.FunctionComponent<IAppLayout> = ({ children }) => {
   const handleChange = (_event: React.FormEvent<HTMLInputElement>, checked: boolean) => {
     setIsChecked(!checked);
     document.documentElement.classList.toggle('mui-theme');
+    // set a var true or false wheteher the switch is set and
+    // anywhere there is an icon override have that be conditional of wether the value is true or not
+    // window.isSwitched
   };
 
   const masthead = (
