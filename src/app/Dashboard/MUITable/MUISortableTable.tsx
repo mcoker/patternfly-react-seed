@@ -195,8 +195,6 @@ export default function MUISortableTable() {
   );
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Paper sx={{ width: '100%', mb: 2 }}>
         <TableContainer>
           <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle" size={'medium'}>
             <EnhancedTableHead
@@ -244,7 +242,5 @@ export default function MUISortableTable() {
             </TableBody>
           </Table>
         </TableContainer>
-      </Paper>
-    </Box>
   );
 }
