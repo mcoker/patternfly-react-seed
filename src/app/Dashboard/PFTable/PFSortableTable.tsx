@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Tbody, Td, Th, ThProps, Thead, Tr } from '@patternfly/react-table';
+import { PageSection } from '@patternfly/react-core';
 import MUISortableTable from '../MUITable/MUISortableTable';
 
 interface Repository {
@@ -83,21 +84,21 @@ export const PFSortableTable: React.FunctionComponent = () => {
   });
 
   return (
-    <React.Fragment>
-      <br />
+    <PageSection>
       MUI Table:
       <MUISortableTable />
+      <br /><br />
       PF Table:
       <Table aria-label="Sortable table custom toolbar">
         <Thead>
           <Tr isBorderRow>
             <Th sort={getSortParams(0)}>{columnNames.name}</Th>
-            <Th sort={getSortParams(1)}>{columnNames.branches}</Th>
-            <Th sort={getSortParams(2)}>
+            <Th sort={getSortParams(1)} className="pf-m-align-right">{columnNames.branches}</Th>
+            <Th sort={getSortParams(2)} className="pf-m-align-right">
               {columnNames.prs}
             </Th>
-            <Th sort={getSortParams(3)}>{columnNames.workspaces}</Th>
-            <Th sort={getSortParams(4)}>{columnNames.lastCommit}</Th>
+            <Th sort={getSortParams(3)} className="pf-m-align-right">{columnNames.workspaces}</Th>
+            <Th sort={getSortParams(4)} className="pf-m-align-right">{columnNames.lastCommit}</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -112,6 +113,6 @@ export const PFSortableTable: React.FunctionComponent = () => {
           ))}
         </Tbody>
       </Table>
-    </React.Fragment>
+    </PageSection>
   );
 };
