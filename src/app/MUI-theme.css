@@ -1,3 +1,5 @@
+@import url("overrides-from-figma.css");
+
 :root {
   --mui-palette-primary-light: #42a5f5;
   --mui-palette-secondary-light: #ba68c8;
@@ -32,15 +34,13 @@
   --pf-t--global--border--width--box--status--default: 1px;
   --pf-t--global--border--radius--pill: var(--mui-alert-warning-border-radius);
   --pf-t--global--border--radius--medium: var(--mui-alert-warning-border-radius);
-  --pf-t--global--font--family--100: "Roboto", sans-serif;
-  --pf-t--global--font--family--200: "Roboto", sans-serif;
-  --pf-t--global--border--color--clicked: var(--mui-palette-primary-main);
+  /* --pf-t--global--border--color--clicked: var(--mui-palette-primary-main); */
   /* --pf-t--global--font--family--body: "Roboto", sans-serif; */
 
 
 
   .pf-v6-c-alert {
-    --pf-v6-c-alert--m-warning__title--Color: var(--mui-alert-warning-text);
+    --pf-v6-c-alert--m-warning__title--Color: var(--pf-t--global--text--color--status--warning--default);
     --pf-v6-c-alert__icon--MarginInlineEnd: 12px;
 
     --pf-v6-c-alert--BoxShadow: none;
@@ -90,7 +90,7 @@
     --pf-v6-c-table--cell--PaddingInlineEnd: 16px;
     --pf-v6-c-table--cell--PaddingBlockStart: 16px;
     --pf-v6-c-table--cell--PaddingBlockEnd: 16px;
-    --pf-v6-c-table--cell--first-last-child--PaddingInline: 32px;
+    --pf-v6-c-table--cell--first-last-child--PaddingInline: 0px;
 
     --pf-v6-c-table__thead--cell--FontWeight: 500;
     --pf-v6-c-table__thead--cell--FontSize: 14px;
@@ -122,10 +122,7 @@
     }
 
     :is(th,td) {
-      &:last-child {
-        --pf-v6-c-table--cell--first-last-child--PaddingInline: 0px;
-      }
-      
+      /*
       &:not(:first-child) {
         .pf-v6-c-table__sort-indicator {
           grid-column: 1;
@@ -137,6 +134,7 @@
           grid-row: 1;
         }
       }
+      */
     }
 
     .pf-v6-c-table__button:is(:hover, :focus),

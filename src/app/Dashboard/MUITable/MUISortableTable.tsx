@@ -88,30 +88,30 @@ const headCells: readonly HeadCell[] = [
   {
     id: 'name',
     numeric: false,
-    disablePadding: true,
+    disablePadding: false,
     label: 'Repositories',
   },
   {
     id: 'calories',
-    numeric: true,
+    numeric: false,
     disablePadding: false,
     label: 'Branches',
   },
   {
     id: 'fat',
-    numeric: true,
+    numeric: false,
     disablePadding: false,
     label: 'Pull requests',
   },
   {
     id: 'carbs',
-    numeric: true,
+    numeric: false,
     disablePadding: false,
     label: 'Workspaces',
   },
   {
     id: 'protein',
-    numeric: true,
+    numeric: false,
     disablePadding: false,
     label: 'Last commit',
   },
@@ -135,17 +135,6 @@ function EnhancedTableHead(props: EnhancedTableProps) {
   return (
     <TableHead>
       <TableRow>
-        <TableCell padding="checkbox">
-          {/* <Checkbox
-            color="primary"
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            onChange={onSelectAllClick}
-            inputProps={{
-              'aria-label': 'select all desserts',
-            }}
-          /> */}
-        </TableCell>
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
@@ -211,22 +200,13 @@ export default function MUISortableTable() {
 
                 return (
                   <TableRow role="checkbox" tabIndex={-1} key={row.id}>
-                    <TableCell padding="checkbox">
-                      {/* <Checkbox
-                        color="primary"
-                        checked={isItemSelected}
-                        inputProps={{
-                          'aria-labelledby': labelId,
-                        }}
-                      /> */}
-                    </TableCell>
-                    <TableCell component="th" id={labelId} scope="row" padding="none">
+                    <TableCell component="th" id={labelId} scope="row">
                       {row.name}
                     </TableCell>
-                    <TableCell align="right">{row.calories}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
-                    <TableCell align="right">{row.carbs}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
+                    <TableCell>{row.calories}</TableCell>
+                    <TableCell>{row.fat}</TableCell>
+                    <TableCell>{row.carbs}</TableCell>
+                    <TableCell>{row.protein}</TableCell>
                   </TableRow>
                 );
               })}
