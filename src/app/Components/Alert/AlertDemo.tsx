@@ -1,69 +1,17 @@
 import * as React from 'react';
 import {
   Alert as PFAlert,
-  Button as PFButton,
-  Tab as PFTab,
-  Tabs as PFTabs,
   PageSection,
-  TabContent,
-  TabContentBody,
-  TabTitleText,
   Text,
   TextContent,
 } from '@patternfly/react-core';
 import '../../MUI-theme.css';
 
 import Alert from '@mui/material/Alert';
-import Button from '@mui/material/Button';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
 
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 
 const AlertDemo: React.FunctionComponent = () => {
-  const [activeTabKey, setActiveTabKey] = React.useState<string | number>(0);
-  const handleTabClick = (
-    event: React.MouseEvent<any> | React.KeyboardEvent | MouseEvent,
-    tabIndex: string | number,
-  ) => {
-    setActiveTabKey(tabIndex);
-  };
-
-  interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    value: number;
-  }
-
-  function a11yProps(index: number) {
-    return {
-      id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
-    };
-  }
-
-  function CustomTabPanel(props: TabPanelProps) {
-    const { children, value, index, ...other } = props;
-
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`simple-tabpanel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}
-      >
-        {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
-      </div>
-    );
-  }
-
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
 
   return (
     <>
@@ -83,6 +31,7 @@ const AlertDemo: React.FunctionComponent = () => {
         <br />
         MUI-themed PF Alert:
         <PFAlert
+        // hide this when the theme is toggled
           customIcon={<WarningAmberIcon />}
           variant="warning"
           title="This is an outlined warning Alert."
