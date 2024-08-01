@@ -24,16 +24,13 @@
     --mui-palette-success-dark: #1b5e20;
 
     --mui-alert-warning-text: #663c00;
-    --mui-alert-warning-border-radius: 4px;
     --mui-alert-warning-font-weight: 400;
 
     --mui-button-font-weight: 500;
     
     --pf-t--global--border--width--box--status--default: 1px;
-    --pf-t--global--border--radius--pill: var(--mui-alert-warning-border-radius);
-    --pf-t--global--border--radius--medium: var(--mui-alert-warning-border-radius);
-    /* --pf-t--global--border--color--clicked: var(--mui-palette-primary-main); */
-    /* --pf-t--global--font--family--body: "Roboto", sans-serif; */
+    --pf-t--global--border--radius--pill: 4px;
+    --pf-t--global--border--radius--medium: 4px;
   }
 
 
@@ -44,12 +41,11 @@
     --pf-v6-c-alert__icon--MarginInlineEnd: 12px;
     --pf-v6-c-alert__icon--MarginBlockStart: 7px;
     --pf-v6-c-alert__icon--FontSize: 22px;
-
     --pf-v6-c-alert--BoxShadow: none;
-
-    padding: 6px 16px;
-    /* Customization could be fragile to maintain */
-    opacity: 0.9
+    --pf-v6-c-alert--PaddingBlockStart: 6px;
+    --pf-v6-c-alert--PaddingBlockEnd: 6px;
+    --pf-v6-c-alert--PaddingInlineStart: 16px;
+    --pf-v6-c-alert--PaddingInlineStart: 16px;
   }
 
   .pf-v6-c-alert__title {
@@ -61,10 +57,14 @@
   }
 
   .pf-v6-c-button {
-    text-transform: uppercase;
     --pf-v6-c-button--FontWeight: var(--mui-button-font-weight);
-    padding: 6px 16px;
-    line-height: 1.75;
+    --pf-v6-c-button--PaddingBlockStart: 6px;
+    --pf-v6-c-button--PaddingBlockEnd: 6px;
+    --pf-v6-c-button--PaddingInlineStart: 16px;
+    --pf-v6-c-button--PaddingInlineEnd: 16px;
+    --pf-v6-c-button--LineHeight: 1.75;
+
+    text-transform: uppercase;
     letter-spacing: 0.02857em;
   }
 
@@ -89,6 +89,7 @@
     --pf-v6-c-table__thead--cell--FontWeight: 500;
     --pf-v6-c-table__thead--cell--FontSize: 14px;
     --pf-v6-c-table__tr--BorderBlockEndColor: rgba(224, 224, 224, 1);
+    --pf-v6-c-table__sort-indicator--MarginInlineStart: 4px;
 
     letter-spacing: 0.01071em;
 
@@ -97,13 +98,12 @@
     }
 
     .pf-v6-c-table__sort-indicator {
-      --pf-v6-c-table__sort-indicator--MarginInlineStart: 4px;
-      margin-inline-end: 4px;
       font-size: 18px;
       opacity: 0;
       transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
       transform-origin: center center;
 
+      /* CSS workaround to use MUI icon for sort icon */
       &::before {
         display: block;
         width: 1em;
@@ -111,28 +111,10 @@
         content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' focusable='false' aria-hidden='true' viewBox='0 0 24 24' data-testid='ArrowDownwardIcon'%3E%3Cpath d='M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z'%3E%3C/path%3E%3C/svg%3E");
       }
 
+      /* Hide PF's default icon for the CSS workaround to use MUI's icon */
       svg {
         display: none;
       }
-    }
-
-    :is(th,td) {
-      /*
-      &:last-child {
-        --pf-v6-c-table--cell--first-last-child--PaddingInline: 0px;
-      }
-
-      &:not(:first-child) {
-        .pf-v6-c-table__sort-indicator {
-          grid-column: 1;
-          grid-row: 1;
-        }
-        .pf-v6-c-table__text {
-          grid-column: 2;
-          grid-row: 1;
-        }
-      }
-      */
     }
 
     .pf-v6-c-table__button:is(:hover, :focus),
@@ -164,13 +146,14 @@
     --pf-v6-c-tabs__link--PaddingBlockEnd: 12px;
     --pf-v6-c-tabs__link--PaddingInlineStart: 16px;
     --pf-v6-c-tabs__link--PaddingInlineEnd: 16px;
-    --pf-v6-c-tabs__item--m-current__link--Color: var(--mui-palette-primary-main);
+    --pf-v6-c-tabs__item--m-current__link--Color: var(--pf-t--global--text--color--brand--default);
     --pf-v6-c-tabs__item--m-current__link--after--BorderWidth: 2px;
+    --pf-v6-c-tabs__link--FontSize: 0.875rem;
  }
 
   .pf-v6-c-tabs__link {
     text-transform: uppercase;
-    font-weight: var(--mui-button-font-weight);
+    font-weight: 500;
     line-height: 1.75;
     letter-spacing: 0.02857em;
   }
@@ -180,13 +163,5 @@
     --pf-v6-c-tab-content__body--m-padding--PaddingBlockStart: var(--pf-t--global--spacer--lg);
     --pf-v6-c-tab-content__body--m-padding--PaddingInlineEnd: var(--pf-t--global--spacer--lg);
     --pf-v6-c-tab-content__body--m-padding--PaddingInlineStart: var(--pf-t--global--spacer--lg);
-  }
-
-  .pf-v6-c-tabs__item-text {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.25;
-    letter-spacing: 0.02857em;
   }
 }
